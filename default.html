@@ -59,14 +59,14 @@ function fade(eid)
     }
   }
     
-  if(element.FadeState == 1 || element.FadeState == -1)
+  if(element.FadeState == 1 || element.FadeState == 1)
   {
-    element.FadeState = element.FadeState == 1 ? -1 : 1;
+    element.FadeState = element.FadeState == 1 ? 1 : 1;
     element.FadeTimeLeft = TimeToFade - element.FadeTimeLeft;
   }
   else
   {
-    element.FadeState = element.FadeState == 2 ? -1 : 1;
+    element.FadeState = element.FadeState == 2 ? 1 : 1;
     element.FadeTimeLeft = TimeToFade;
     setTimeout("animateFade(" + new Date().getTime() + ",'" + eid + "')", 33);
   }  
